@@ -10,6 +10,8 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 ul li {
@@ -18,4 +20,14 @@ ul li {
 
 .active {
   color: lime
+}
+
+@media screen and (max-width: 768px) {
+  ul {
+    flex-direction: column;
+  }
+
+  ul li {
+    margin: 0.5rem;
+  }
 }
