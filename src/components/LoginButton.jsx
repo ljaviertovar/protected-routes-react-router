@@ -35,7 +35,13 @@ export default function LoginButton({ user, setUser }) {
 
 	return (
 		<div>
-			{!user ? <button onClick={() => login()}>Login</button> : <button onClick={() => logout()}>Logout</button>}
+			{!user ? (
+				<button onClick={() => login()}>Login</button>
+			) : (
+				<button onClick={() => logout()}>
+					Logout ({user.name} {user.id})
+				</button>
+			)}
 			{!user && (
 				<div>
 					<button
